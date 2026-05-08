@@ -1,0 +1,22 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Content-Security-Policy (CSP)
+    # Nota: Esta es una política base. Si usas scripts externos, deberás agregarlos aquí.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+
+    # X-Frame-Options
+    # Evita que tu sitio sea puesto en un <iframe> (previene Clickjacking)
+    X-Frame-Options = "DENY"
+
+    # X-Content-Type-Options
+    # Evita que el navegador intente adivinar el tipo de contenido (previene ataques de sniffing)
+    X-Content-Type-Options = "nosniff"
+
+    # Referrer-Policy
+    # Controla cuánta información se envía al hacer clic en un enlace hacia otro sitio
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+    # Permissions-Policy
+    # Restringe el acceso a funciones del navegador (cámara, micro, etc.)
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
