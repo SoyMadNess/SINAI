@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 * {
   margin: 0;
   padding: 0;
@@ -197,20 +199,6 @@ body {
   width: 100%;
 }
 
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: var(--primary-color);
-  margin: 5px 0;
-  transition: var(--transition);
-}
-
 /* ===== HERO SECTION ===== */
 .hero {
   margin-top: 80px;
@@ -271,12 +259,17 @@ body {
 .btnContacto {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
-  box-shadow: 0 0 20px rgba(43, 255, 115, 0.5);
+  box-shadow: 0 0 20px rgba(40, 255, 115, 0.7);
+}
+
+.btnContacto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(26, 143, 70, 0.7);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 30px rgba(43, 255, 115, 0.7);
+  box-shadow: 0 0 30px rgba(40, 255, 115, 0.7);
 }
 
 .btn-secondary {
@@ -552,121 +545,6 @@ body {
 .item-content p {
   font-size: 1.3rem;
   font-weight: bold;
-}
-
-/* ===== PRECIOS ===== */
-.precios {
-  min-height: 100vh;
-  padding: 5rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.precios-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.precio-card {
-  background: rgba(43, 255, 115, 0.05);
-  border: 2px solid var(--primary-color);
-  border-radius: 15px;
-  padding: 2rem;
-  text-align: center;
-  transition: var(--transition);
-  position: relative;
-}
-
-.precio-card.featured {
-  transform: scale(1.05);
-  border-color: var(--secondary-color);
-    box-shadow: 0 0 40px rgba(166, 255, 51, 0.3);
-}
-
-.precio-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 40px rgba(43, 255, 115, 0.3);
-}
-
-.precio-card.featured:hover {
-  transform: scale(1.05) translateY(-10px);
-}
-
-.scroll-top-btn {
-  position: fixed;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid var(--accent-color);
-  background: rgba(0, 0, 0, 0.85);
-  color: var(--text-color);
-  font-size: 1.5rem;
-  cursor: pointer;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 1001;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 20px rgba(68, 248, 255, 0.25);
-  pointer-events: none;
-}
-
-.scroll-top-btn.show {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.popular {
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
-.precio-card h3 {
-  font-size: 1.5rem;
-  margin: 1rem 0;
-  color: var(--accent-color);
-}
-
-.price {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: var(--primary-color);
-  margin: 1rem 0;
-}
-
-.price span {
-  font-size: 1rem;
-  color: var(--text-light);
-}
-
-.features {
-  list-style: none;
-  margin: 2rem 0;
-  text-align: left;
-}
-
-.features li {
-  padding: 0.5rem 0;
-  color: var(--text-light);
-}
-
-.precio-card button {
-  width: 100%;
-  margin-top: 1rem;
 }
 
 /* ===== CONTACTO ===== */
